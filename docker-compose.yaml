@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  jihub-back:
+    image: jihub-back:latest
+    container_name: jihub-back
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./djangoProject:/app/djangoProject
+      - ./django.log:/app/django.log
+      - ./myApp:/app/myApp
+      - ./userRepos:/app/userRepos
+      - ./manage.py:/app/manage.py
+      - ./rebuildsqlite.sh:/app/rebuildsqlite.sh
+    working_dir: /app
+    

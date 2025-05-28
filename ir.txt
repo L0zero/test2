@@ -1,0 +1,328 @@
+# Global Declarations:
+# ------------------------global------------------------
+$global start
+$begin @global@0
+# --------Global--------
+    be decl  
+$end @global@0
+
+
+# Main Func Declarations:
+# ------------------------entry------------------------
+$func start
+$begin main@12
+$jump_to main@13
+$dom main@12
+# --------New Function main Defined--------
+    def main  
+    be fpara  
+    decl Var@a@2 Int 0
+    decl Var@b@3 Int 0
+    decl Temp@8 Int 0
+    decl Temp@9 Int 0
+    decl Temp@10 Int 0
+    be decl
+$end main@12
+
+
+$begin main@13
+$jump_from main@12
+$jump_to main@14
+$def Temp@9 Temp@9@23
+$def b Var@b@3@22
+$def a Var@a@2@20
+$def Temp@8 Temp@8@21
+$def Temp@10 Temp@10@24
+$dom main@13
+$dom main@12
+$sDom main@12
+$iDom main@12
+# main func content
+    values Var@a@2@20 10 
+    be rpara  
+    rpara Var@a@2@20  
+    call func1  
+    getrt Temp@8@21  
+    values Var@b@3@22 Temp@8@21 
+    im 2 Temp@9@23 
+    be rpara  
+    rpara Global@String@0@5  
+    rpara Var@b@3@22  
+    rpara Temp@9@23  
+    call printf  
+    im 0 Temp@10@24 
+    ret Temp@10@24  
+    ret none  
+$end main@13
+
+
+$begin main@14
+$jump_from main@13
+$def Temp@9 Temp@9@23
+$def b Var@b@3@22
+$def a Var@a@2@20
+$def Temp@8 Temp@8@21
+$def Temp@10 Temp@10@24
+$dom main@14
+$dom main@13
+$dom main@12
+$sDom main@13
+$sDom main@12
+$iDom main@13
+# main func exit
+    label exit@main  
+    exit   
+$end main@14
+
+
+# ------------------------cpBlocks------------------------
+# ------------------------func------------------------
+# Func Declaration:
+$begin func1@2
+$jump_to func1@3
+$dom func1@2
+# --------New Function func1 Defined--------
+    def func1  
+    fpara Var@a@1 0 Int
+    be fpara  
+    decl Temp@0 Int 0
+    decl Temp@1 Int 0
+    decl Temp@2 Int 0
+    decl Temp@3 Int 0
+    decl Temp@4 Int 0
+    decl Temp@5 Int 0
+    decl Temp@6 Int 0
+    decl Temp@7 Int 0
+    be decl
+$end func1@2
+
+
+$begin func1@3
+$jump_from func1@2
+$jump_to func1@4
+$jump_to func1@5
+$def Temp@0 Temp@0@6
+$def Temp@1 Temp@1@8
+$def a Var@a@1@7
+$dom func1@3
+$dom func1@2
+$sDom func1@2
+$iDom func1@2
+# func content
+    im 0 Temp@0@6 
+    eql Var@a@1@7 Temp@0@6 Temp@1@8
+    im Temp@1@8 Global@Cond@Global@4 
+    bez Global@Cond@Global@4 func1@5 
+$end func1@3
+
+
+$begin func1@4
+$jump_from func1@3
+$jump_to func1@7
+$def Temp@0 Temp@0@6
+$def Temp@1 Temp@1@8
+$def a Var@a@1@7
+$dom func1@4
+$dom func1@3
+$dom func1@2
+$sDom func1@3
+$sDom func1@2
+$iDom func1@3
+$df func1@6
+# if else B1
+$end func1@4
+
+
+$begin func1@7
+$jump_from func1@4
+$jump_to func1@8
+$def Temp@0 Temp@0@6
+$def Temp@2 Temp@2@9
+$def Temp@1 Temp@1@8
+$def a Var@a@1@7
+$dom func1@7
+$dom func1@4
+$dom func1@3
+$dom func1@2
+$sDom func1@4
+$sDom func1@3
+$sDom func1@2
+$iDom func1@4
+$df func1@6
+# new irBlock for block
+    im 0 Temp@2@9 
+    ret Temp@2@9  
+$end func1@7
+
+
+$begin func1@8
+$jump_from func1@7
+$jump_to func1@15
+$def Temp@0 Temp@0@6
+$def Temp@2 Temp@2@9
+$def Temp@1 Temp@1@8
+$def a Var@a@1@7
+$dom func1@8
+$dom func1@7
+$dom func1@4
+$dom func1@3
+$dom func1@2
+$sDom func1@7
+$sDom func1@4
+$sDom func1@3
+$sDom func1@2
+$iDom func1@7
+$df func1@6
+# new irBlock after block
+    j func1@15  
+$end func1@8
+
+
+$begin func1@5
+$jump_from func1@3
+$jump_to func1@9
+$def Temp@0 Temp@0@6
+$def Temp@1 Temp@1@8
+$def a Var@a@1@7
+$dom func1@5
+$dom func1@3
+$dom func1@2
+$sDom func1@3
+$sDom func1@2
+$iDom func1@3
+$df func1@6
+# if else B2
+$end func1@5
+
+
+$begin func1@9
+$jump_from func1@5
+$jump_to func1@10
+$def Temp@0 Temp@0@6
+$def Temp@4 Temp@4@17
+$def Temp@3 Temp@3@16
+$def Temp@1 Temp@1@8
+$def Temp@6 Temp@6@19
+$def a Var@a@1@7
+$def Temp@5 Temp@5@18
+$dom func1@9
+$dom func1@5
+$dom func1@3
+$dom func1@2
+$sDom func1@5
+$sDom func1@3
+$sDom func1@2
+$iDom func1@5
+$df func1@6
+# new irBlock for block
+    be rpara  
+    im 1 Temp@3@16 
+    sub Var@a@1@7 Temp@3@16 Temp@4@17
+    rpara Temp@4@17  
+    call func1  
+    getrt Temp@5@18  
+    add Temp@5@18 Var@a@1@7 Temp@6@19
+    ret Temp@6@19  
+$end func1@9
+
+
+$begin func1@10
+$jump_from func1@9
+$jump_to func1@16
+$def Temp@0 Temp@0@6
+$def Temp@4 Temp@4@17
+$def Temp@3 Temp@3@16
+$def Temp@1 Temp@1@8
+$def Temp@6 Temp@6@19
+$def a Var@a@1@7
+$def Temp@5 Temp@5@18
+$dom func1@10
+$dom func1@9
+$dom func1@5
+$dom func1@3
+$dom func1@2
+$sDom func1@9
+$sDom func1@5
+$sDom func1@3
+$sDom func1@2
+$iDom func1@9
+$df func1@6
+# new irBlock after block
+    j func1@16  
+$end func1@10
+
+
+$begin func1@6
+$jump_from func1@8
+$jump_from func1@10
+$jump_to func1@11
+$def Temp@0 Temp@0@6
+$def Temp@2 Temp@2@10
+$def Temp@4 Temp@4@11
+$def Temp@3 Temp@3@12
+$def Temp@1 Temp@1@8
+$def Temp@6 Temp@6@13
+$def a Var@a@1@7
+$def Temp@5 Temp@5@14
+$def Temp@7 Temp@7@15
+$dom func1@6
+$dom func1@3
+$dom func1@2
+$sDom func1@3
+$sDom func1@2
+$iDom func1@3
+# if else B3
+$phi Temp@2@10 {Temp@2@9, func1@8} 
+$phi Temp@4@11 {Temp@4@17, func1@10} 
+$phi Temp@3@12 {Temp@3@16, func1@10} 
+$phi Temp@6@13 {Temp@6@19, func1@10} 
+$phi Temp@5@14 {Temp@5@18, func1@10} 
+    im 0 Temp@7@15 
+    ret Temp@7@15  
+    ret none  
+$end func1@6
+
+
+$begin func1@11
+$jump_from func1@6
+$def Temp@0 Temp@0@6
+$def Temp@2 Temp@2@10
+$def Temp@4 Temp@4@11
+$def Temp@3 Temp@3@12
+$def Temp@1 Temp@1@8
+$def Temp@6 Temp@6@13
+$def a Var@a@1@7
+$def Temp@5 Temp@5@14
+$def Temp@7 Temp@7@15
+$dom func1@11
+$dom func1@6
+$dom func1@3
+$dom func1@2
+$sDom func1@6
+$sDom func1@3
+$sDom func1@2
+$iDom func1@6
+# func exit
+    label exit@func1  
+    exit   
+$end func1@11
+
+
+# ------------------------cpBlocks------------------------
+$begin func1@15
+# From func1@8 To func1@6
+    cp Temp@2@9 Temp@2@10 
+    j func1@6  
+$end func1@15
+
+
+$begin func1@16
+# From func1@10 To func1@6
+    cp Temp@4@17 Temp@4@11 
+    cp Temp@3@16 Temp@3@12 
+    cp Temp@6@19 Temp@6@13 
+    cp Temp@5@18 Temp@5@14 
+    j func1@6  
+$end func1@16
+
+

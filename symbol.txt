@@ -1,0 +1,16 @@
+1 func1 IntFunc
+1 String@0 
+2 a Int
+2 Temp@0 
+2 Temp@1 
+2 Temp@7 
+3 Temp@2 
+4 Temp@3 
+4 Temp@4 
+4 Temp@5 
+4 Temp@6 
+5 a Int
+5 b Int
+5 Temp@8 
+5 Temp@9 
+5 Temp@10 

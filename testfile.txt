@@ -1,0 +1,15 @@
+int func1(int a) {
+    if (a == 0) {
+        return 0;
+    } else {
+        return func1(a - 1) + a;
+    }
+    return 0;
+}
+
+int main() {
+    int a = 10;
+    int b = func1(a);
+    printf("%d\n", b);
+    return 0;
+}

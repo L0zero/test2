@@ -1,0 +1,1 @@
+java -jar MARS-2024.jar mips.txt > output.txt < input.txt

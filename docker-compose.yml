@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  app:
+    image: jihub-front:latest
+    volumes:
+      - ./src:/app/src          # 挂载源码
+      - ./public:/app/public    # 挂载静态文件
+      - ./index.html:/app/index.html  # 挂载首页
+      - ./vite.config.js:/app/vite.config.js  # 挂载配置文件
+      - /app/node_modules       # 隔离 node_modules
+    ports:
+      - "3000:3000"
+      - "80:80"
